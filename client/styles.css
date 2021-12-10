@@ -1,0 +1,166 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #312e2e;
+}
+
+header {
+    background: #f63c12;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header, header a {
+    letter-spacing: 0.2rem;
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #312e2e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    right: 0;
+}
+
+.visible {
+    display: block;
+}
+
+.header-menu {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.header-menu li {
+    float: left;
+    border-right: solid white 1px;
+    padding: 0px 10px;
+}
+
+.banner {
+    font-size: 21px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main div {
+    text-align: center;
+}
+
+main div img:hover {
+    border: 2px solid white;
+}
+
+main div img {
+    width: 94%;
+    margin: 2% 1%;
+    cursor: pointer;
+}
+
+.movie-detail-poster{
+    float: left;
+    width: 17%;
+    margin-right: 10px;
+}
+
+#movieModal .modal-footer {
+    justify-content: center;
+}
+
+.modal-header {
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-header span {
+    color: white;
+}
+
+.modal-body {
+    background: #312e2e;
+    color: white;
+}
+
+#searchInput {
+    background: transparent;
+}
+
+@media (min-width: 1025px) {
+    .header-menu {
+        display: block;
+    }
+    .dropdown {
+        display: none;
+    }
+    main {
+        column-count: 4;
+    }
+    main div {
+        width: 25%;
+    }
+    .modal-dialog {
+        width: 40%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-menu {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+    main {
+        column-count: 3;
+    }
+    main div {
+        width: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-menu {
+        display: none;
+    }
+    .dropdown {
+        display: block;
+    }
+    main {
+        column-count: 1;
+    }
+    main div {
+        width: 90%;
+    }
+    .modal-dialog {
+        width: 70%;
+        max-width: none;
+    }
+}

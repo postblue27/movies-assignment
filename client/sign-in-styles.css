@@ -1,0 +1,7 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+body {
+	height: 100vh;
+    background: linear-gradient(#0006, #000c, #0006), url("img/landing.jpg");
+}
