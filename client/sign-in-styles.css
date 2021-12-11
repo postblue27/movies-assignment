@@ -5,3 +5,18 @@ body {
 	height: 100vh;
     background: linear-gradient(#0006, #000c, #0006), url("img/landing.jpg");
 }
+
+.control-button{
+    position: fixed;
+    bottom: 15vh;
+    width: 150px;
+    height: 100px;
+    margin: 3vw;
+}
+
+.sign-in-button{
+    right: 50%;
+}
+.register-button{
+    left: 50%;
+}

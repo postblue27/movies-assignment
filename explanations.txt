@@ -1,0 +1,5 @@
+1. You can't go to the other page except sign in page because auth-guard.js script is included in every page except sign in page. 
+This script checks if browser local storage holds the username that we write to local storage when user signs in.
+If there is no username written - then user is not signed in and script redirects to sign in page.
+
+2.

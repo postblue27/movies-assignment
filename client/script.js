@@ -1,3 +1,5 @@
+
+
 $(function(){
   $('.dropdown').click(function(){
     $('.dropdown-content').toggleClass('visible');
@@ -14,4 +16,3 @@ function redirectClick() {
   document.location.replace('movies.html');
 }
 
-onMoviesHtmlLoad
