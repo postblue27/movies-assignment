@@ -5,19 +5,90 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
               integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="sign-in-styles.css">
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
         <script src="script.js"></script>
     </head>
     <body>
-        <button onclick="redirectClick()">Redirect</button>
-        <button type="button" class="btn btn-secondary btn-lg control-button sign-in-button">Sign In</button>
-        <button type="button" class="btn btn-secondary btn-lg control-button register-button">Register</button>
+        <div class="movies-app-header">
+            <div class="movies-app-header-main">Movie FansApp</div>
+            <div class="movies-app-header-secondary">The number one movie tracking website</div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg control-button sign-in-button" data-toggle="modal" data-target="#sign-in-modal" href="">Sign In</button>
+        <button type="button" class="btn btn-secondary btn-lg control-button register-button" data-toggle="modal" data-target="#register-modal" href="">Register</button>
     </body>
+
+    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title" id="signInModalLabel">User Sign In</div>
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <label class="text-white">Username</label>
+                    <input id="usernameInput" type="text" class="form-control">
+                    <label class="text-white">Password</label>
+                    <input id="passwordInput" type="text" class="form-control">
+                    <button class="btn btn-light float-right" type="submit" onclick="signIn()">Submit</button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="register-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title" id="signInModalLabel">User Sign In</div>
+              <button type="button" class="close" data-dismiss="modal">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="#">
+                    <label class="text-white">Username</label>
+                    <input id="usernameRegisterInput" type="text" class="form-control">
+                    <label class="text-white">Full Name</label>
+                    <input id="nameRegisterInput" type="text" class="form-control">
+                    <label class="text-white">Password</label>
+                    <input id="passwordRegisterInput" type="text" class="form-control">
+                    <label class="text-white">Confirm Password</label>
+                    <input id="confirmPasswordRegisterInput" type="text" class="form-control">
+                    <button class="btn btn-light float-right" type="submit" onclick="register()">Submit</button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  <div style="position: absolute; top: 0; right: 0; z-index: 100000;">
+    <div class="toast errorToast" data-autohide="false">
+      <div class="toast-header">
+          <strong class="mr-auto text-danger">Error</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+      </div>
+      <div class="toast-body text-danger" id="errorToastBodyText">
+      </div>
+    </div>
+
+    <div class="toast successToast text-success" data-autohide="false">
+      <div class="toast-header">
+          <strong class="mr-auto text-success">Success</strong>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+      </div>
+      <div class="toast-body" id="successToastBodyText">
+      </div>
+    </div>
+  </div>
 </html>

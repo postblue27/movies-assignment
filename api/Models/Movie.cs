@@ -12,19 +12,4 @@ public class Movie
     public double VoteAverage { get; set; }
     public int VoteCount { get; set; }
     public string Status { get; set; }
-    // public Movie(int number, string id, string imdbId, string originalTitle, string genres, string overview, string posterPath, string releaseDate, int runtime, double voteAverage, int voteCount, string status)
-    // {
-        // Number = number;
-        // Id = id;
-        // ImdbId = imdbId;
-        // OriginalTitle = originalTitle;
-        // Genres = genres;
-        // Overview = overview;
-        // PosterPath = posterPath;
-        // ReleaseDate = releaseDate;
-        // Runtime = runtime;
-        // VoteAverage = voteAverage;
-        // VoteCount = voteCount;
-        // Status = status;
-    // }
 }

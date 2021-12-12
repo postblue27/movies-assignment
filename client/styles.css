@@ -112,6 +112,35 @@ main div img {
     background: transparent;
 }
 
+/*PAGINATION STYLES*/
+.pagination {
+    margin-top: 1rem ;
+    margin-bottom: 0.5rem;
+    background-color: #494747;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .page_item {
+padding: 0.75rem;
+    border: white 1px solid;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  .page_item:hover {
+    background-color: #6d6a6a;
+  }
+  .active-page {
+    background-color: #e44d26;
+    color: white;
+  }
+
 @media (min-width: 1025px) {
     .header-menu {
         display: block;
